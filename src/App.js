@@ -1,8 +1,4 @@
-//import logo from './logo.svg';
-import './App.css';
 import React, { useEffect } from 'react'
-//import CssBaseline from '@mui/material/CssBaseline';
-//import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Search from './components/Search';
 import UserCard from './containers/userCard';
@@ -50,9 +46,7 @@ useEffect(()=>{
         flexDirection:"column",
         alignItems:"center"   
       }}>
-        {/* <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} >*/}
-
-          {/* </Box> */}
+        
         <Search 
         inputUser={inputUser} 
         setInputUser={setInputUser}/>
