@@ -1,8 +1,8 @@
 //import { Description } from '@mui/icons-material';
-import { CardMedia, Grid } from '@mui/material';
+import { CardMedia, Grid, Stack } from '@mui/material';
 import React from 'react'
-import PrincipalInformation from '../components/PrincipalInformation'
-import Description from './../containers/Description'
+import PrincipalInformation from '../../components/PrincipalInformation'
+import Description from '../Description'
 
 const UseCard=(props)=>{
 const {userState}= props;
@@ -21,15 +21,25 @@ return (
             alt="GitHub User"
             image={avatar_url}
             sx={{
-                borderRadius:"50%"
+                borderRadius:"50%",
+                marginLeft:"7px"
+                
             }}
             />
 
         </Grid>
         <Grid item xs={9}>
+        <Stack
+        direction="column"
+        spacing={1}
+        sx={{ margin: '30px'}}
+        >
         <PrincipalInformation userState={userState} />
-        </Grid>
         <Description userState={userState} />
+        
+        </Stack>
+        
+        </Grid>
                
          </Grid >
 )

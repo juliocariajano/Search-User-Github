@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 //import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Search from './components/Search';
-import UseCard from './containers';
+import UserCard from './containers/userCard';
 import {useState} from 'react'
 import {gitHubUsers} from "./services/users"
 
@@ -42,7 +42,7 @@ useEffect(()=>{
       {/* <CssBaseline /> */}
       <Container sx={{
         background: 'whitesmoke',
-        width:'80vw',
+        width:'90vw',
         height: '500px',
         borderRadius:"16px",
         marginTop:"30px",
@@ -56,7 +56,7 @@ useEffect(()=>{
         <Search 
         inputUser={inputUser} 
         setInputUser={setInputUser}/>
-        <UseCard userState={userState} />        
+        <UserCard userState={userState} />        
       </Container>
     </React.Fragment>
   );
